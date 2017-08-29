@@ -1,8 +1,8 @@
-defmodule MasterProxy.Mixfile do
+defmodule SimpleBot.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :master_proxy,
+    [app: :simple_bot,
      version: "0.1.0",
      build_path: "../../_build",
      config_path: "../../config/config.exs",
@@ -20,7 +20,7 @@ defmodule MasterProxy.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
-     mod: {MasterProxy.Application, []}]
+     mod: {SimpleBot.Application, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -40,8 +40,6 @@ defmodule MasterProxy.Mixfile do
     [
       {:plug, "~> 1.2"},
       {:cowboy, "~> 1.0"},
-      {:bots_web, in_umbrella: true},
-      {:simple_bot, in_umbrella: true},
     ]
   end
 end
