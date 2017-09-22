@@ -6,6 +6,6 @@ defmodule SimpleBot.Endpoint do
   end
 
   def call(conn, _opts) do
-    Plug.Conn.send_resp(conn, 200, "")
+    Plug.Conn.send_resp(conn, 200, "It's working!")
   end
 end
